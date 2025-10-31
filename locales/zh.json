@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "IP工具箱"
+  },
+  "navigation": {
+    "proxyTest": "代理测试",
+    "myIp": "我的IP",
+    "ipLookup": "IP查询",
+    "browserTest": "浏览器检测",
+    "subnetCalc": "子网计算",
+    "ipConverter": "IP转换",
+    "macGenerator": "MAC生成",
+    "hashTool": "哈希工具",
+    "dnsVisualizer": "DNS可视化",
+    "websocketTest": "WebSocket",
+    "ipGenerator": "IP生成器",
+    "blockRules": "屏蔽规则",
+    "ipv6Tools": "IPv6工具",
+    "httpChecker": "HTTP检查",
+    "urlParser": "URL解析",
+    "punycodeConverter": "Punycode转换",
+    "emailHeaderAnalyzer": "邮件头分析",
+    "about": "关于"
+  },
+  "layout": {
+    "logoAlt": "Star IP Toolbox 标志",
+    "sidebar": {
+      "expand": "展开侧边栏",
+      "collapse": "收起侧边栏"
+    },
+    "languageSwitch": {
+      "toEnglishShort": "EN",
+      "toEnglishFull": "切换到英文",
+      "toChineseShort": "中文",
+      "toChineseFull": "切换到中文"
+    },
+    "mobileMenu": {
+      "open": "打开导航菜单",
+      "close": "关闭导航菜单"
+    }
+  },
+  "components": {
+    "spinner": {
+      "srLabel": "加载中..."
+    }
+  },
+  "common": {
+    "copy": "复制",
+    "copied": "已复制!",
+    "copyAll": "复制全部",
+    "format": "格式",
+    "import": "导入",
+    "importing": "导入中...",
+    "loading": "加载中...",
+    "retry": "重试",
+    "notAvailable": "暂无",
+    "warning": "警告",
+    "error": "错误",
+    "close": "关闭"
+  },
+  "pages": {
+    "home": {
+      "header": {
+        "title": "StarProxyTester 代理测试器",
+        "subtitle": "轻松测试您的 SOCKS4、SOCKS5、HTTP(S) 代理。"
+      },
+      "importSection": {
+        "label": "从URL导入代理列表",
+        "placeholder": "例如: https://example.com/proxies.txt",
+        "button": {
+          "idle": "导入",
+          "loading": "导入中..."
+        }
+      },
+      "proxyInput": {
+        "label": "代理列表 (每行一个)",
+        "placeholder": "例如: protocol://user:pass@host:port 或 host:port"
+      },
+      "targetInput": {
+        "label": "目标网址 (可选, 每行一个)",
+        "placeholder": "例如: https://www.google.com"
+      },
+      "actions": {
+        "start": "开始测试",
+        "running": "测试中..."
+      },
+      "progressText": "已完成 {value}%",
+      "copySection": {
+        "availableSummary": "可用代理 ({available} / {total})",
+        "formatPrefix": "格式: {label}"
+      },
+      "filters": {
+        "all": "全部"
+      },
+      "table": {
+        "proxy": "代理",
+        "protocol": "协议",
+        "connectionLatency": "连接延迟 (ms)",
+        "websiteLatency": "网站延迟 (ms)"
+      },
+      "emptyStates": {
+        "noneForFilter": "当前筛选条件下无可用代理。",
+        "noneOverall": "根据您的条件，未找到可用的代理。"
+      },
+      "errors": {
+        "urlRequired": "请输入URL。",
+        "importFailed": "导入失败，可能由于CORS限制或URL无效。",
+        "noValidProxy": "请输入至少一个有效的代理。"
+      }
+    },
+    "blockRules": {
+      "ipListPlaceholder": "192.168.1.1\n10.0.0.1\n172.16.0.1",
+      "serverTypes": [
+        { "value": "apache", "label": "Apache", "desc": ".htaccess" },
+        { "value": "nginx", "label": "Nginx", "desc": "nginx.conf" },
+        { "value": "iptables", "label": "iptables", "desc": "Linux 防火墙" },
+        { "value": "firewalld", "label": "firewalld", "desc": "RHEL/CentOS" },
+        { "value": "windows", "label": "Windows", "desc": "Windows 防火墙" }
+      ],
+      "instructions": [
+        {
+          "title": "Apache (.htaccess):",
+          "description": "将规则添加到网站根目录的 .htaccess 文件中。"
+        },
+        {
+          "title": "Nginx:",
+          "description": "将规则添加到 nginx.conf 的 server 块中，然后重载：",
+          "code": "nginx -s reload"
+        },
+        {
+          "title": "iptables:",
+          "description": "以 root 权限运行命令。保存规则：",
+          "code": "iptables-save"
+        },
+        {
+          "title": "firewalld:",
+          "description": "以 root 权限运行命令。生成的规则已包含重载命令。"
+        },
+        {
+          "title": "Windows 防火墙:",
+          "description": "保存为 .bat 文件并以管理员身份运行。"
+        }
+      ]
+    },
+    "myIp": {
+      "title": "我的 IP 信息",
+      "error": "无法获取 IP 信息，请稍后重试。",
+      "coordinatesLabel": "纬度/经度",
+      "fields": {
+        "ip": "IP 地址",
+        "country": "国家",
+        "region": "地区",
+        "city": "城市",
+        "isp": "ISP",
+        "timezone": "时区",
+        "postal": "邮编",
+        "coordinates": "坐标"
+      }
+    },
+    "ipLookup": {
+      "title": "IP / 域名查询",
+      "inputLabel": "输入 IP 地址或域名",
+      "placeholder": "例如: 8.8.8.8 或 google.com",
+      "button": {
+        "idle": "查询",
+        "loading": "查询中..."
+      },
+      "resultsTitle": "查询结果",
+      "errors": {
+        "emptyInput": "请输入 IP 地址或域名。",
+        "dnsQueryFailed": "DNS 解析失败。",
+        "domainResolveFailed": "无法解析该域名。",
+        "lookupFailed": "查询失败，请检查输入。"
+      },
+      "fields": {
+        "ip": "IP 地址",
+        "hostname": "主机名",
+        "country": "国家",
+        "region": "地区",
+        "city": "城市",
+        "isp": "ISP",
+        "timezone": "时区",
+        "coordinates": "坐标"
+      }
+    },
+    "browserTest": {
+      "title": "浏览器环境 / 匿名性测试",
+      "subtitle": "运行多项检测，识别 IP 泄露、指纹风险和异常设置。",
+      "progressLabel": "检测进度：{value}%",
+      "buttons": {
+        "loading": "检测中...",
+        "retry": "重新检测"
+      },
+      "instructionsTitle": "关于这些检测",
+      "instructions": [
+        {
+          "title": "WebRTC 泄露",
+          "description": "检测 WebRTC 是否暴露您的真实 IP。"
+        },
+        {
+          "title": "IP 一致性",
+          "description": "对比多个服务返回的 IP 地址是否一致。"
+        },
+        {
+          "title": "时区与语言",
+          "description": "检测浏览器语言和时区设置是否匹配。"
+        },
+        {
+          "title": "Canvas 指纹",
+          "description": "评估 Canvas 渲染指纹的稳定性。"
+        },
+        {
+          "title": "字体指纹",
+          "description": "统计浏览器可访问的系统字体。"
+        },
+        {
+          "title": "硬件属性",
+          "description": "汇总设备屏幕、平台和硬件信息。"
+        }
+      ],
+      "hardware": {
+        "labels": {
+          "screenResolution": "屏幕分辨率",
+          "availableScreen": "可用屏幕",
+          "colorDepth": "颜色深度",
+          "cpuCores": "CPU 核心",
+          "memory": "内存",
+          "platform": "平台",
+          "userAgent": "用户代理"
+        }
+      },
+      "tests": {
+        "webrtc": {
+          "name": "WebRTC 泄露检测",
+          "details": {
+            "public": "检测到 {count} 个 IP 地址，其中包含公网 IP。",
+            "private": "检测到 {count} 个 IP 地址，全部为内网 IP。",
+            "countOnly": "检测到 {count} 个 IP 地址。"
+          }
+        },
+        "ipConsistency": {
+          "name": "IP 地址一致性",
+          "details": {
+            "consistent": "多个来源返回的 IP 地址一致。",
+            "inconsistent": "检测到 IP 不一致：{ip1} vs {ip2}。",
+            "failed": "无法完成一致性检测。"
+          }
+        },
+        "timezone": {
+          "name": "时区与语言",
+          "details": {
+            "mismatch": "检测到时区与语言可能不匹配。",
+            "normal": "时区与语言设置正常。"
+          }
+        },
+        "canvas": {
+          "name": "Canvas 指纹",
+          "details": {
+            "noContext": "无法创建 Canvas 渲染上下文。",
+            "stable": "Canvas 指纹稳定。",
+            "unstable": "Canvas 指纹不稳定，可能启用了防指纹措施。"
+          }
+        },
+        "font": {
+          "name": "字体指纹",
+          "details": {
+            "detected": "检测到 {count} 个系统字体。"
+          }
+        },
+        "hardware": {
+          "name": "硬件与屏幕属性",
+          "details": {
+            "score": "硬件指纹唯一性评分：{value}%"
+          }
+        }
+      }
+    },
+    "ipConverter": {
+      "title": "IP 地址转换器",
+      "inputLabel": "输入 IP（任意格式）",
+      "placeholder": "192.168.1.1 或 3232235777 或 0xC0A80101",
+      "resultTitle": "转换结果",
+      "formats": {
+        "dotted": "点分十进制",
+        "decimal": "十进制",
+        "hex": "十六进制",
+        "binary": "二进制"
+      },
+      "errors": {
+        "dotted": "无效的点分十进制格式。",
+        "decimal": "无效的十进制数。",
+        "hex": "无效的十六进制格式。",
+        "binary": "无效的二进制格式。",
+        "generic": "转换失败，请检查输入。"
+      }
+    },
+    "websocketTest": {
+      "title": "WebSocket 测试工具",
+      "form": {
+        "urlLabel": "WebSocket 地址",
+        "urlPlaceholder": "wss://echo.websocket.org"
+      },
+      "actions": {
+        "connect": "连接",
+        "disconnect": "断开连接",
+        "send": "发送",
+        "clearMessages": "清空消息"
+      },
+      "messages": {
+        "sectionTitle": "消息",
+        "empty": "暂无消息",
+        "connectionSuccess": "✓ 连接成功",
+        "connectionError": "✗ 连接错误",
+        "connectionClosed": "✗ 连接已关闭",
+        "connectionFailed": "✗ 连接失败: {error}",
+        "unknownError": "未知错误"
+      },
+      "inputs": {
+        "messagePlaceholder": "输入消息..."
+      },
+      "instructions": {
+        "title": "使用说明",
+        "step1": "输入 WebSocket 服务器地址（ws:// 或 wss://）。",
+        "step2": "点击“连接”建立连接。",
+        "step3": "在输入框中输入消息并发送。",
+        "step4": "接收到的消息会显示在消息区域。",
+        "step5": "测试服务器：wss://echo.websocket.org（回显服务器）。"
+      }
+    },
+    "macGenerator": {
+      "title": "MAC 地址生成器",
+      "form": {
+        "countLabel": "生成数量",
+        "separatorLabel": "分隔符",
+        "separatorOptions": {
+          "none": "无"
+        },
+        "uppercaseLabel": "大写字母",
+        "generate": "生成 MAC 地址"
+      },
+      "results": {
+        "title": "生成的 MAC 地址",
+        "hint": "💡 提示：生成的 MAC 地址标记为“本地管理”类型，适用于虚拟化和测试环境。"
+      }
+    },
+    "hashTool": {
+      "title": "哈希 / 编码工具",
+      "input": {
+        "label": "输入文本",
+        "placeholder": "输入要处理的文本..."
+      },
+      "actions": {
+        "decode": {
+          "base64": "Base64 解码",
+          "url": "URL 解码"
+        }
+      },
+      "sections": {
+        "hashes": "哈希值",
+        "encodings": "编码结果",
+        "supported": "支持的算法"
+      },
+      "messages": {
+        "md5Unsupported": "(不支持 - 请使用在线 MD5 工具)",
+        "decodeError": "解码失败，请检查输入格式。",
+        "error": "错误"
+      },
+      "encodings": {
+        "types": {
+          "base64": "Base64",
+          "url": "URL 编码",
+          "hex": "十六进制"
+        }
+      },
+      "supported": {
+        "items": [
+          { "label": "哈希", "value": "SHA-1、SHA-256、SHA-384、SHA-512" },
+          { "label": "编码", "value": "Base64、URL 编码、十六进制" },
+          { "label": "解码", "value": "Base64、URL 编码" }
+        ],
+        "note": "注意：由于安全原因，现代浏览器不再支持 MD5。请使用 SHA-256 或更高版本。"
+      }
+    },
+    "webRtcTest": {
+      "title": "WebRTC 泄露测试",
+      "description": "检测您的真实 IP 是否会通过 WebRTC 泄露（即使使用 VPN 或代理）。",
+      "loading": {
+        "status": "检测中..."
+      },
+      "results": {
+        "none": "未检测到任何 IP 地址。可能是浏览器禁用了 WebRTC，或网络配置阻止了本次检测。",
+        "detectedTitle": "检测到的 IP 地址：",
+        "labels": {
+          "private": "内网 IP",
+          "public": "公网 IP"
+        }
+      },
+      "warning": {
+        "title": "⚠️ 警告：检测到公网 IP 泄露！",
+        "description": "您的真实 IP 地址可能通过 WebRTC 泄露。如果您正在使用 VPN 或代理，建议在浏览器中禁用 WebRTC。"
+      },
+      "actions": {
+        "retry": "重新检测"
+      },
+      "info": {
+        "title": "关于 WebRTC 泄露",
+        "items": [
+          "WebRTC 是一种用于实时通信的浏览器技术。",
+          "它可能绕过 VPN 或代理，暴露您的真实 IP 地址。",
+          "内网 IP（如 192.168.x.x）通常不会造成隐私威胁。",
+          "公网 IP 泄露可能暴露您的真实地理位置。"
+        ]
+      }
+    },
+    "dnsVisualizer": {
+      "title": "DNS 记录可视化",
+      "form": {
+        "domainLabel": "域名",
+        "placeholder": "例如：google.com",
+        "button": {
+          "idle": "查询 DNS 记录",
+          "loading": "查询中..."
+        },
+        "errors": {
+          "domainRequired": "请输入域名。",
+          "noRecords": "未找到 DNS 记录。"
+        }
+      },
+      "results": {
+        "recordTitle": "{type} 记录",
+        "fields": {
+          "name": "域名",
+          "data": "数据",
+          "ttl": "TTL"
+        }
+      },
+      "supported": {
+        "title": "支持的记录类型",
+        "items": [
+          "A（IPv4 地址）",
+          "AAAA（IPv6 地址）",
+          "CNAME（别名）",
+          "MX（邮件服务器）",
+          "TXT（文本记录）",
+          "NS（域名服务器）"
+        ]
+      }
+    },
+    "urlParser": {
+      "title": "URL 解析器",
+      "description": "将URL解析为各个组成部分，包括协议、主机名、端口、路径、查询参数等。",
+      "input": {
+        "label": "输入 URL",
+        "placeholder": "例如: https://user:pass@example.com:8080/path?key=value#hash"
+      },
+      "actions": {
+        "parse": "解析"
+      },
+      "results": {
+        "title": "解析结果",
+        "protocol": "协议",
+        "hostname": "主机名",
+        "port": "端口",
+        "pathname": "路径",
+        "search": "查询字符串",
+        "hash": "锚点",
+        "username": "用户名",
+        "password": "密码",
+        "origin": "源",
+        "host": "主机",
+        "queryParams": "查询参数",
+        "defaultPort": "默认"
+      },
+      "errors": {
+        "empty": "请输入一个URL",
+        "invalid": "无效的URL格式"
+      }
+    },
+    "punycodeConverter": {
+      "title": "Punycode 转换器",
+      "description": "在国际化域名（IDN）和 Punycode 编码之间进行双向转换。支持多语言域名的编码和解码。",
+      "input": {
+        "label": "输入域名",
+        "placeholder": "例如: 中国.com 或 xn--fiqs8s.com"
+      },
+      "actions": {
+        "convert": "转换"
+      },
+      "results": {
+        "title": "转换结果",
+        "punycode": "Punycode 编码",
+        "unicode": "Unicode（国际化域名）"
+      },
+      "examples": {
+        "title": "示例",
+        "try": "试试"
+      },
+      "errors": {
+        "empty": "请输入一个域名",
+        "conversion": "转换失败，请检查输入格式"
+      }
+    },
+    "emailHeaderAnalyzer": {
+      "title": "邮件头分析器",
+      "description": "分析电子邮件的原始头部信息，追踪邮件传输路径、提取发件人IP地址，并检查身份验证记录（SPF、DKIM、DMARC）。",
+      "input": {
+        "label": "粘贴邮件头部（原始格式）",
+        "placeholder": "从您的邮件客户端复制完整的邮件头部信息并粘贴到这里..."
+      },
+      "actions": {
+        "analyze": "分析"
+      },
+      "results": {
+        "title": "分析结果",
+        "basicInfo": "基本信息",
+        "from": "发件人",
+        "to": "收件人",
+        "subject": "主题",
+        "date": "日期",
+        "messageId": "邮件ID",
+        "returnPath": "回复路径",
+        "path": "邮件传输路径",
+        "hop": "跳",
+        "fromServer": "来源服务器",
+        "byServer": "经由服务器",
+        "sourceIPs": "来源IP地址",
+        "authentication": "身份验证信息",
+        "unknown": "未知"
+      },
+      "errors": {
+        "empty": "请粘贴邮件头部信息",
+        "invalid": "未找到有效的邮件头部信息",
+        "parsing": "解析邮件头部失败"
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "StarIPToolbox",
+        "subtitle": "一站式 IP 工具箱",
+        "description": [
+          "功能丰富的纯前端 IP 工具集，提供代理测试、IP 查询、隐私检测和网络诊断等功能。",
+          "所有操作均在浏览器本地完成，不上传任何数据，保护您的隐私。"
+        ],
+        "buttons": {
+          "github": "GitHub",
+          "star": "收藏"
+        }
+      },
+      "features": {
+        "title": "核心特性",
+        "items": [
+          { "icon": "globe", "title": "IP 工具集", "desc": "全面的 IP 查询与分析能力" },
+          { "icon": "shield", "title": "隐私检测", "desc": "浏览器指纹与泄露检测" },
+          { "icon": "zap", "title": "实时测试", "desc": "即时的代理与网络测试" },
+          { "icon": "code", "title": "纯前端", "desc": "无需后端，数据不离开本地" }
+        ]
+      },
+      "tools": {
+        "title": "工具列表",
+        "items": [
+          "代理测试器",
+          "我的 IP 信息",
+          "IP/域名查询",
+          "浏览器环境检测",
+          "子网计算器",
+          "IP 地址转换",
+          "MAC 地址生成",
+          "哈希/编码工具",
+          "DNS 可视化",
+          "WebSocket 测试",
+          "IP 生成器",
+          "屏蔽规则生成",
+          "IPv6 工具",
+          "HTTP 检查器",
+          "URL 解析器",
+          "Punycode 转换器",
+          "邮件头分析器"
+        ]
+      },
+      "version": {
+        "title": "版本信息",
+        "current": {
+          "label": "当前版本",
+          "value": "v2.0.0"
+        },
+        "updated": {
+          "label": "更新时间",
+          "value": "2025-01-26"
+        },
+        "license": {
+          "label": "许可证",
+          "value": "MIT License"
+        }
+      },
+      "footer": {
+        "madeWith": "Made with",
+        "by": "by",
+        "tagline": "开源免费 • 持续更新 • 社区驱动"
+      }
+    },
+    "ipGenerator": {
+      "usageTips": {
+        "title": "使用提示",
+        "items": [
+          "CIDR 模式：生成子网内的所有 IP 地址（如 10.0.0.0/24）",
+          "范围模式：生成两个地址之间的所有 IP",
+          "随机模式：生成随机的公网 IP 地址",
+          "CIDR/范围模式最多生成 10,000 个，随机模式限制为 1,000 个",
+          "支持导出 TXT 或 CSV，用于扫描器或防火墙规则"
+        ]
+      }
+    },
+    "ipv6Tools": {
+      "summary": {
+        "items": [
+          "全球单播：2000::/3 - 公网地址",
+          "链路本地：fe80::/10 - 同一网络段",
+          "唯一本地：fc00::/7 - 私有网络",
+          "组播：ff00::/8 - 一对多通信",
+          "环回：::1/128 - 本地主机"
+        ]
+      }
+    }
+  },
+  "appName": "IP工具箱",
+  "expand": "展开",
+  "collapse": "收起",
+  "proxyTest": "代理测试",
+  "myIP": "我的IP",
+  "ipLookup": "IP查询",
+  "browserTest": "浏览器检测",
+  "subnetCalc": "子网计算",
+  "ipConverter": "IP转换",
+  "macGenerator": "MAC生成",
+  "hashTool": "哈希工具",
+  "dnsVisualizer": "DNS可视化",
+  "websocketTest": "WebSocket",
+  "ipGenerator": "IP生成器",
+  "blockRules": "屏蔽规则",
+  "ipv6Tools": "IPv6工具",
+  "httpChecker": "HTTP检查",
+  "about": "关于",
+  "ipVersion": "IP版本",
+  "ipAddress": "IP地址",
+  "cidrPrefix": "CIDR前缀长度",
+  "calculate": "计算",
+  "results": "计算结果",
+  "networkAddress": "网络地址",
+  "broadcast": "广播地址",
+  "firstHost": "首个可用主机",
+  "lastHost": "最后可用主机",
+  "subnetMask": "子网掩码",
+  "wildcard": "通配符掩码",
+  "cidr": "CIDR",
+  "totalHosts": "总主机数",
+  "usableHosts": "可用主机数",
+  "binarySubnetMask": "二进制子网掩码",
+  "toolType": "工具类型",
+  "compressExpand": "压缩/展开",
+  "ipv4ToIpv6": "IPv4转IPv6",
+  "validateAnalyze": "验证和分析",
+  "input": "输入",
+  "convert": "转换",
+  "compressed": "压缩格式",
+  "expanded": "展开格式",
+  "canonical": "规范格式",
+  "binary": "二进制",
+  "valid": "有效性",
+  "type": "类型",
+  "scope": "作用域",
+  "ipv6AddressTypes": "IPv6地址类型",
+  "bulkIPGenerator": "批量IP生成器",
+  "generationMode": "生成模式",
+  "cidrMode": "CIDR",
+  "rangeMode": "范围",
+  "randomMode": "随机",
+  "cidrNotation": "CIDR表示法",
+  "startIP": "起始IP",
+  "endIP": "结束IP",
+  "numberOfIPs": "IP数量 (最多1000)",
+  "generateIPs": "生成IP",
+  "generating": "生成中...",
+  "generated": "已生成",
+  "copy": "复制",
+  "copied": "已复制!",
+  "download": "下载",
+  "usageTips": "使用提示",
+  "blockRulesGenerator": "服务器屏蔽规则生成器",
+  "ipList": "IP列表 (每行一个)",
+  "serverFirewallType": "服务器/防火墙类型",
+  "generateRules": "生成规则",
+  "generatedRules": "生成的规则",
+  "usageInstructions": "使用说明",
+  "httpHeaderChecker": "HTTP头部检查器",
+  "url": "URL",
+  "checking": "检查中...",
+  "checkHeaders": "检查头部",
+  "response": "响应",
+  "status": "状态",
+  "headers": "头部信息"
+}

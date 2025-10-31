@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "IP Toolbox"
+  },
+  "navigation": {
+    "proxyTest": "Proxy Test",
+    "myIp": "My IP",
+    "ipLookup": "IP Lookup",
+    "browserTest": "Browser Test",
+    "subnetCalc": "Subnet Calculator",
+    "ipConverter": "IP Converter",
+    "macGenerator": "MAC Generator",
+    "hashTool": "Hash Tool",
+    "dnsVisualizer": "DNS Visualizer",
+    "websocketTest": "WebSocket Test",
+    "ipGenerator": "IP Generator",
+    "blockRules": "Block Rules",
+    "ipv6Tools": "IPv6 Tools",
+    "httpChecker": "HTTP Checker",
+    "urlParser": "URL Parser",
+    "punycodeConverter": "Punycode Converter",
+    "emailHeaderAnalyzer": "Email Header Analyzer",
+    "about": "About"
+  },
+  "layout": {
+    "logoAlt": "Star IP Toolbox logo",
+    "sidebar": {
+      "expand": "Expand sidebar",
+      "collapse": "Collapse sidebar"
+    },
+    "languageSwitch": {
+      "toEnglishShort": "EN",
+      "toEnglishFull": "Switch to English",
+      "toChineseShort": "中文",
+      "toChineseFull": "Switch to Chinese"
+    },
+    "mobileMenu": {
+      "open": "Open navigation",
+      "close": "Close navigation"
+    }
+  },
+  "components": {
+    "spinner": {
+      "srLabel": "Loading..."
+    }
+  },
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied!",
+    "copyAll": "Copy All",
+    "format": "Format",
+    "import": "Import",
+    "importing": "Importing...",
+    "loading": "Loading...",
+    "retry": "Retry",
+    "notAvailable": "N/A",
+    "warning": "Warning",
+    "error": "Error",
+    "close": "Close"
+  },
+  "pages": {
+    "home": {
+      "header": {
+        "title": "StarProxyTester Proxy Suite",
+        "subtitle": "Easily test your SOCKS4, SOCKS5, and HTTP(S) proxies."
+      },
+      "importSection": {
+        "label": "Import proxies from URL",
+        "placeholder": "e.g. https://example.com/proxies.txt",
+        "button": {
+          "idle": "Import",
+          "loading": "Importing..."
+        }
+      },
+      "proxyInput": {
+        "label": "Proxy list (one per line)",
+        "placeholder": "e.g. protocol://user:pass@host:port or host:port"
+      },
+      "targetInput": {
+        "label": "Target URLs (optional, one per line)",
+        "placeholder": "e.g. https://www.google.com"
+      },
+      "actions": {
+        "start": "Start testing",
+        "running": "Testing..."
+      },
+      "progressText": "{value}% complete",
+      "copySection": {
+        "availableSummary": "Available proxies ({available} / {total})",
+        "formatPrefix": "Format: {label}"
+      },
+      "filters": {
+        "all": "All"
+      },
+      "table": {
+        "proxy": "Proxy",
+        "protocol": "Protocol",
+        "connectionLatency": "Connection latency (ms)",
+        "websiteLatency": "Website latency (ms)"
+      },
+      "emptyStates": {
+        "noneForFilter": "No proxies match the current filter.",
+        "noneOverall": "No available proxies were found for your input."
+      },
+      "errors": {
+        "urlRequired": "Please enter a URL.",
+        "importFailed": "Import failed. The resource may be blocked by CORS or invalid.",
+        "noValidProxy": "Please provide at least one valid proxy."
+      }
+    },
+    "blockRules": {
+      "ipListPlaceholder": "192.168.1.1\n10.0.0.1\n172.16.0.1",
+      "serverTypes": [
+        { "value": "apache", "label": "Apache", "desc": ".htaccess" },
+        { "value": "nginx", "label": "Nginx", "desc": "nginx.conf" },
+        { "value": "iptables", "label": "iptables", "desc": "Linux Firewall" },
+        { "value": "firewalld", "label": "firewalld", "desc": "RHEL/CentOS" },
+        { "value": "windows", "label": "Windows", "desc": "Windows Firewall" }
+      ],
+      "instructions": [
+        {
+          "title": "Apache (.htaccess):",
+          "description": "Add rules to the .htaccess file in your web root directory."
+        },
+        {
+          "title": "Nginx:",
+          "description": "Add rules inside the server block in nginx.conf, then reload:",
+          "code": "nginx -s reload"
+        },
+        {
+          "title": "iptables:",
+          "description": "Run commands as root. Save rules:",
+          "code": "iptables-save"
+        },
+        {
+          "title": "firewalld:",
+          "description": "Run commands as root. The generated rules already include the reload command."
+        },
+        {
+          "title": "Windows Firewall:",
+          "description": "Save as a .bat file and run as Administrator."
+        }
+      ]
+    },
+    "myIp": {
+      "title": "My IP information",
+      "error": "Unable to retrieve IP information. Please try again later.",
+      "coordinatesLabel": "Latitude / Longitude",
+      "fields": {
+        "ip": "IP Address",
+        "country": "Country",
+        "region": "Region",
+        "city": "City",
+        "isp": "ISP",
+        "timezone": "Time Zone",
+        "postal": "Postal Code",
+        "coordinates": "Coordinates"
+      }
+    },
+    "ipLookup": {
+      "title": "IP / Domain Lookup",
+      "inputLabel": "Enter IP address or domain",
+      "placeholder": "e.g. 8.8.8.8 or google.com",
+      "button": {
+        "idle": "Lookup",
+        "loading": "Looking up..."
+      },
+      "resultsTitle": "Lookup result",
+      "errors": {
+        "emptyInput": "Please enter an IP address or domain.",
+        "dnsQueryFailed": "Failed to perform DNS query.",
+        "domainResolveFailed": "Unable to resolve the provided domain.",
+        "lookupFailed": "Lookup failed. Please check your input."
+      },
+      "fields": {
+        "ip": "IP Address",
+        "hostname": "Hostname",
+        "country": "Country",
+        "region": "Region",
+        "city": "City",
+        "isp": "ISP",
+        "timezone": "Time Zone",
+        "coordinates": "Coordinates"
+      }
+    },
+    "browserTest": {
+      "title": "Browser fingerprint & anonymity tests",
+      "subtitle": "Run a series of checks to spot IP leaks, fingerprinting risks, and inconsistent settings.",
+      "progressLabel": "Progress: {value}%",
+      "buttons": {
+        "loading": "Running tests...",
+        "retry": "Run tests again"
+      },
+      "instructionsTitle": "About these checks",
+      "instructions": [
+        {
+          "title": "WebRTC leak",
+          "description": "Checks whether WebRTC exposes your real IP address."
+        },
+        {
+          "title": "IP consistency",
+          "description": "Compares IP addresses returned by multiple services to detect mismatches."
+        },
+        {
+          "title": "Timezone & language",
+          "description": "Highlights potential mismatches between browser language preferences and timezone."
+        },
+        {
+          "title": "Canvas fingerprint",
+          "description": "Evaluates how unique your Canvas rendering fingerprint is."
+        },
+        {
+          "title": "Font fingerprint",
+          "description": "Lists fonts exposed to the browser that may aid fingerprinting."
+        },
+        {
+          "title": "Hardware attributes",
+          "description": "Summarises screen, platform, and hardware hints visible to websites."
+        }
+      ],
+      "hardware": {
+        "labels": {
+          "screenResolution": "Screen resolution",
+          "availableScreen": "Available screen",
+          "colorDepth": "Color depth",
+          "cpuCores": "CPU cores",
+          "memory": "Memory",
+          "platform": "Platform",
+          "userAgent": "User agent"
+        }
+      },
+      "tests": {
+        "webrtc": {
+          "name": "WebRTC leak detection",
+          "details": {
+            "public": "Detected {count} IP addresses including public IPs.",
+            "private": "Detected {count} IP addresses; all are private.",
+            "countOnly": "Detected {count} IP addresses."
+          }
+        },
+        "ipConsistency": {
+          "name": "IP consistency",
+          "details": {
+            "consistent": "IP addresses from multiple sources match.",
+            "inconsistent": "Mismatch detected: {ip1} vs {ip2}.",
+            "failed": "Unable to complete the consistency check."
+          }
+        },
+        "timezone": {
+          "name": "Timezone & language",
+          "details": {
+            "mismatch": "Timezone and browser language may not match.",
+            "normal": "Timezone and language settings look consistent."
+          }
+        },
+        "canvas": {
+          "name": "Canvas fingerprint",
+          "details": {
+            "noContext": "Unable to create a Canvas rendering context.",
+            "stable": "Canvas fingerprint appears stable.",
+            "unstable": "Canvas fingerprint seems unstable; anti-fingerprinting measures detected?"
+          }
+        },
+        "font": {
+          "name": "Font fingerprint",
+          "details": {
+            "detected": "Detected {count} available fonts."
+          }
+        },
+        "hardware": {
+          "name": "Hardware & screen attributes",
+          "details": {
+            "score": "Hardware fingerprint uniqueness score: {value}%"
+          }
+        }
+      }
+    },
+    "ipConverter": {
+      "title": "IP Address Converter",
+      "inputLabel": "Enter IP address (any format)",
+      "placeholder": "192.168.1.1 or 3232235777 or 0xC0A80101",
+      "resultTitle": "Conversion result",
+      "formats": {
+        "dotted": "Dotted decimal",
+        "decimal": "Decimal",
+        "hex": "Hexadecimal",
+        "binary": "Binary"
+      },
+      "errors": {
+        "dotted": "Invalid dotted decimal format.",
+        "decimal": "Invalid decimal value.",
+        "hex": "Invalid hexadecimal format.",
+        "binary": "Invalid binary format.",
+        "generic": "Conversion failed. Please check your input."
+      }
+    },
+    "websocketTest": {
+      "title": "WebSocket Test Tool",
+      "form": {
+        "urlLabel": "WebSocket URL",
+        "urlPlaceholder": "wss://echo.websocket.org"
+      },
+      "actions": {
+        "connect": "Connect",
+        "disconnect": "Disconnect",
+        "send": "Send",
+        "clearMessages": "Clear messages"
+      },
+      "messages": {
+        "sectionTitle": "Messages",
+        "empty": "No messages yet",
+        "connectionSuccess": "✓ Connected successfully",
+        "connectionError": "✗ Connection error",
+        "connectionClosed": "✗ Connection closed",
+        "connectionFailed": "✗ Connection failed: {error}",
+        "unknownError": "Unknown error"
+      },
+      "inputs": {
+        "messagePlaceholder": "Type a message..."
+      },
+      "instructions": {
+        "title": "How to use",
+        "step1": "Enter the WebSocket server address (ws:// or wss://).",
+        "step2": "Click \"Connect\" to establish the connection.",
+        "step3": "Type a message in the input box and send it.",
+        "step4": "Incoming messages will appear in the log.",
+        "step5": "Test server: wss://echo.websocket.org (echo server)."
+      }
+    },
+    "macGenerator": {
+      "title": "MAC Address Generator",
+      "form": {
+        "countLabel": "Quantity",
+        "separatorLabel": "Separator",
+        "separatorOptions": {
+          "none": "None"
+        },
+        "uppercaseLabel": "Uppercase letters",
+        "generate": "Generate MAC addresses"
+      },
+      "results": {
+        "title": "Generated MAC addresses",
+        "hint": "💡 Tip: Generated MAC addresses are marked as locally administered, suitable for virtualization and testing environments."
+      }
+    },
+    "hashTool": {
+      "title": "Hash & Encoding Tool",
+      "input": {
+        "label": "Input text",
+        "placeholder": "Enter the text to process..."
+      },
+      "actions": {
+        "decode": {
+          "base64": "Decode Base64",
+          "url": "Decode URL"
+        }
+      },
+      "sections": {
+        "hashes": "Hash values",
+        "encodings": "Encoding results",
+        "supported": "Supported algorithms"
+      },
+      "messages": {
+        "md5Unsupported": "(Not supported - please use an online MD5 tool)",
+        "decodeError": "Decoding failed. Please check the input format.",
+        "error": "Error"
+      },
+      "encodings": {
+        "types": {
+          "base64": "Base64",
+          "url": "URL encoding",
+          "hex": "Hexadecimal"
+        }
+      },
+      "supported": {
+        "items": [
+          { "label": "Hashes", "value": "SHA-1, SHA-256, SHA-384, SHA-512" },
+          { "label": "Encodings", "value": "Base64, URL encoding, Hexadecimal" },
+          { "label": "Decoding", "value": "Base64, URL encoding" }
+        ],
+        "note": "Note: MD5 is not supported in modern browsers. Please use SHA-256 or higher."
+      }
+    },
+    "webRtcTest": {
+      "title": "WebRTC Leak Test",
+      "description": "Check whether your real IP is exposed through WebRTC (even with a VPN or proxy).",
+      "loading": {
+        "status": "Testing..."
+      },
+      "results": {
+        "none": "No IP addresses detected. Your browser may have WebRTC disabled or your network blocked this test.",
+        "detectedTitle": "Detected IP addresses:",
+        "labels": {
+          "private": "Private IP",
+          "public": "Public IP"
+        }
+      },
+      "warning": {
+        "title": "⚠️ Warning: Public IP leak detected!",
+        "description": "Your real IP address may be leaking via WebRTC. If you are using a VPN or proxy, consider disabling WebRTC in your browser."
+      },
+      "actions": {
+        "retry": "Run again"
+      },
+      "info": {
+        "title": "About WebRTC leaks",
+        "items": [
+          "WebRTC is a browser technology used for real-time communication.",
+          "It can bypass VPNs or proxies and expose your real IP address.",
+          "Private IPs (e.g. 192.168.x.x) are usually not a privacy concern.",
+          "Public IP leaks can reveal your actual location."
+        ]
+      }
+    },
+    "dnsVisualizer": {
+      "title": "DNS Record Visualizer",
+      "form": {
+        "domainLabel": "Domain",
+        "placeholder": "e.g. google.com",
+        "button": {
+          "idle": "Query DNS records",
+          "loading": "Querying..."
+        },
+        "errors": {
+          "domainRequired": "Please enter a domain name.",
+          "noRecords": "No DNS records found."
+        }
+      },
+      "results": {
+        "recordTitle": "{type} records",
+        "fields": {
+          "name": "Domain",
+          "data": "Data",
+          "ttl": "TTL"
+        }
+      },
+      "supported": {
+        "title": "Supported record types",
+        "items": [
+          "A (IPv4 address)",
+          "AAAA (IPv6 address)",
+          "CNAME (Alias)",
+          "MX (Mail server)",
+          "TXT (Text record)",
+          "NS (Name server)"
+        ]
+      }
+    },
+    "urlParser": {
+      "title": "URL Parser",
+      "description": "Parse a URL into its individual components including protocol, hostname, port, path, query parameters, and more.",
+      "input": {
+        "label": "Enter URL",
+        "placeholder": "e.g., https://user:pass@example.com:8080/path?key=value#hash"
+      },
+      "actions": {
+        "parse": "Parse"
+      },
+      "results": {
+        "title": "Parse Results",
+        "protocol": "Protocol",
+        "hostname": "Hostname",
+        "port": "Port",
+        "pathname": "Path",
+        "search": "Query String",
+        "hash": "Hash",
+        "username": "Username",
+        "password": "Password",
+        "origin": "Origin",
+        "host": "Host",
+        "queryParams": "Query Parameters",
+        "defaultPort": "Default"
+      },
+      "errors": {
+        "empty": "Please enter a URL",
+        "invalid": "Invalid URL format"
+      }
+    },
+    "punycodeConverter": {
+      "title": "Punycode Converter",
+      "description": "Convert between internationalized domain names (IDN) and Punycode encoding. Supports bidirectional conversion for multilingual domain names.",
+      "input": {
+        "label": "Enter Domain Name",
+        "placeholder": "e.g., 中国.com or xn--fiqs8s.com"
+      },
+      "actions": {
+        "convert": "Convert"
+      },
+      "results": {
+        "title": "Conversion Results",
+        "punycode": "Punycode",
+        "unicode": "Unicode (IDN)"
+      },
+      "examples": {
+        "title": "Examples",
+        "try": "Try it"
+      },
+      "errors": {
+        "empty": "Please enter a domain name",
+        "conversion": "Conversion failed, please check your input"
+      }
+    },
+    "emailHeaderAnalyzer": {
+      "title": "Email Header Analyzer",
+      "description": "Analyze raw email headers to trace the message path, extract sender IP addresses, and check authentication records (SPF, DKIM, DMARC).",
+      "input": {
+        "label": "Paste Email Headers (Raw Format)",
+        "placeholder": "Copy the complete email headers from your email client and paste here..."
+      },
+      "actions": {
+        "analyze": "Analyze"
+      },
+      "results": {
+        "title": "Analysis Results",
+        "basicInfo": "Basic Information",
+        "from": "From",
+        "to": "To",
+        "subject": "Subject",
+        "date": "Date",
+        "messageId": "Message ID",
+        "returnPath": "Return Path",
+        "path": "Email Transmission Path",
+        "hop": "Hop",
+        "fromServer": "From Server",
+        "byServer": "By Server",
+        "sourceIPs": "Source IP Addresses",
+        "authentication": "Authentication Information",
+        "unknown": "Unknown"
+      },
+      "errors": {
+        "empty": "Please paste email headers",
+        "invalid": "No valid email headers found",
+        "parsing": "Failed to parse email headers"
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "StarIPToolbox",
+        "subtitle": "One-stop IP toolbox",
+        "description": [
+          "A feature-rich client-side IP toolkit offering proxy testing, IP lookups, privacy checks, and networking utilities.",
+          "All actions run locally in your browser, keeping your data private."
+        ],
+        "buttons": {
+          "github": "GitHub",
+          "star": "Star"
+        }
+      },
+      "features": {
+        "title": "Core features",
+        "items": [
+          { "icon": "globe", "title": "IP toolkit", "desc": "Comprehensive IP lookup and analysis tools" },
+          { "icon": "shield", "title": "Privacy checks", "desc": "Browser fingerprint and leak detection" },
+          { "icon": "zap", "title": "Real-time tests", "desc": "Instant proxy and network diagnostics" },
+          { "icon": "code", "title": "Frontend-only", "desc": "No backend required, data stays on your device" }
+        ]
+      },
+      "tools": {
+        "title": "Tool list",
+        "items": [
+          "Proxy tester",
+          "My IP info",
+          "IP/domain lookup",
+          "Browser environment checks",
+          "Subnet calculator",
+          "IP address converter",
+          "MAC address generator",
+          "Hash & encoding tool",
+          "DNS visualizer",
+          "WebSocket tester",
+          "IP generator",
+          "Block rules generator",
+          "IPv6 tools",
+          "HTTP checker",
+          "URL parser",
+          "Punycode converter",
+          "Email header analyzer"
+        ]
+      },
+      "version": {
+        "title": "Version info",
+        "current": {
+          "label": "Current version",
+          "value": "v2.0.0"
+        },
+        "updated": {
+          "label": "Last updated",
+          "value": "2025-01-26"
+        },
+        "license": {
+          "label": "License",
+          "value": "MIT License"
+        }
+      },
+      "footer": {
+        "madeWith": "Made with",
+        "by": "by",
+        "tagline": "Open-source • Continuously updated • Community-driven"
+      }
+    },
+    "ipGenerator": {
+      "usageTips": {
+        "title": "Usage tips",
+        "items": [
+          "CIDR: Generate all IPs within a subnet (e.g., 10.0.0.0/24)",
+          "Range: Generate every IP between two addresses",
+          "Random: Generate random public IP addresses",
+          "CIDR/Range outputs are limited to 10,000 IPs, Random mode to 1,000",
+          "Export results as TXT or CSV for scanners or firewall rules"
+        ]
+      }
+    },
+    "ipv6Tools": {
+      "summary": {
+        "items": [
+          "Global Unicast: 2000::/3 - Public addresses",
+          "Link-Local: fe80::/10 - Same network segment",
+          "Unique Local: fc00::/7 - Private networks",
+          "Multicast: ff00::/8 - One-to-many communication",
+          "Loopback: ::1/128 - Local host"
+        ]
+      }
+    }
+  },
+  "appName": "IP Toolbox",
+  "expand": "Expand",
+  "collapse": "Collapse",
+  "proxyTest": "Proxy Test",
+  "myIP": "My IP",
+  "ipLookup": "IP Lookup",
+  "browserTest": "Browser Test",
+  "subnetCalc": "Subnet Calculator",
+  "ipConverter": "IP Converter",
+  "macGenerator": "MAC Generator",
+  "hashTool": "Hash Tool",
+  "dnsVisualizer": "DNS Visualizer",
+  "websocketTest": "WebSocket Test",
+  "ipGenerator": "IP Generator",
+  "blockRules": "Block Rules",
+  "ipv6Tools": "IPv6 Tools",
+  "httpChecker": "HTTP Header Checker",
+  "about": "About",
+  "ipVersion": "IP Version",
+  "ipAddress": "IP Address",
+  "cidrPrefix": "CIDR Prefix Length",
+  "calculate": "Calculate",
+  "results": "Results",
+  "networkAddress": "Network Address",
+  "broadcast": "Broadcast",
+  "firstHost": "First Host",
+  "lastHost": "Last Host",
+  "subnetMask": "Subnet Mask",
+  "wildcard": "Wildcard",
+  "cidr": "CIDR",
+  "totalHosts": "Total Hosts",
+  "usableHosts": "Usable Hosts",
+  "binarySubnetMask": "Binary Subnet Mask",
+  "toolType": "Tool Type",
+  "compressExpand": "Compress/Expand",
+  "ipv4ToIpv6": "IPv4 to IPv6",
+  "validateAnalyze": "Validate & Analyze",
+  "input": "Input",
+  "convert": "Convert",
+  "compressed": "Compressed",
+  "expanded": "Expanded",
+  "canonical": "Canonical",
+  "binary": "Binary",
+  "valid": "Valid",
+  "type": "Type",
+  "scope": "Scope",
+  "ipv6AddressTypes": "IPv6 Address Types",
+  "bulkIPGenerator": "Bulk IP Generator",
+  "generationMode": "Generation Mode",
+  "cidrMode": "CIDR",
+  "rangeMode": "Range",
+  "randomMode": "Random",
+  "cidrNotation": "CIDR Notation",
+  "startIP": "Start IP",
+  "endIP": "End IP",
+  "numberOfIPs": "Number of IPs (max 1000)",
+  "generateIPs": "Generate IPs",
+  "generating": "Generating...",
+  "generated": "Generated",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "download": "Download",
+  "usageTips": "Usage Tips",
+  "blockRulesGenerator": "Server Block Rules Generator",
+  "ipList": "IP List (one per line)",
+  "serverFirewallType": "Server/Firewall Type",
+  "generateRules": "Generate Rules",
+  "generatedRules": "Generated Rules",
+  "usageInstructions": "Usage Instructions",
+  "httpHeaderChecker": "HTTP Header Checker",
+  "url": "URL",
+  "checking": "Checking...",
+  "checkHeaders": "Check Headers",
+  "response": "Response",
+  "status": "Status",
+  "headers": "Headers"
+}
