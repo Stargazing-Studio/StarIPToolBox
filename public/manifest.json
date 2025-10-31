@@ -2,13 +2,13 @@
   "name": "StarIPToolbox - IP Tools Collection",
   "short_name": "IPToolbox",
   "description": "A comprehensive IP tools collection with proxy testing, IP lookup, browser fingerprint detection, and more",
-  "start_url": "/StarProxyTestTool/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0ea5e9",
   "theme_color": "#38bdf8",
   "icons": [
     {
-      "src": "/StarProxyTestTool/vite.svg",
+      "src": "/vite.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
