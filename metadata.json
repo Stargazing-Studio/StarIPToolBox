@@ -1,5 +1,5 @@
 {
-  "name": "StarProxyTester: 一个简单的代理测试器",
+  "name": "StarIPToolBox: IP工具箱",
   "description": "一个现代、美观的Web应用，用于批量测试SOCKS4, SOCKS5, HTTP, HTTPS代理的可用性。它提供延迟、地理位置和详细的IP分析（包括纯净度和风险评估），全部集成在时尚的毛玻璃界面中。",
   "requestFramePermissions": []
 }

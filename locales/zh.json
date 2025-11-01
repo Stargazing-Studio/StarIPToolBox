@@ -61,7 +61,7 @@
   "pages": {
     "home": {
       "header": {
-        "title": "StarProxyTester 代理测试器",
+        "title": "StarIPToolBox 代理测试器",
         "subtitle": "轻松测试您的 SOCKS4、SOCKS5、HTTP(S) 代理。"
       },
       "importSection": {

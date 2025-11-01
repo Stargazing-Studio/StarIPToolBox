@@ -61,7 +61,7 @@
   "pages": {
     "home": {
       "header": {
-        "title": "StarProxyTester Proxy Suite",
+        "title": "StarIPToolBox Proxy Suite",
         "subtitle": "Easily test your SOCKS4, SOCKS5, and HTTP(S) proxies."
       },
       "importSection": {
