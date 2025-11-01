@@ -6,9 +6,8 @@ export default defineConfig(({ mode }) => {
     // 加载环境变量
     const env = loadEnv(mode, process.cwd(), '');
     
-    // 如果设置了 VITE_USE_CUSTOM_DOMAIN=true，使用根路径
-    // 否则使用 GitHub Pages 子路径
-    const base = env.VITE_USE_CUSTOM_DOMAIN === 'true' ? '/' : '/StarProxyTestTool/';
+    // 使用自定义域名，固定为根路径
+    const base = '/';
     
     return {
       base: base,
