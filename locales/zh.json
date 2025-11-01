@@ -61,8 +61,8 @@
   "pages": {
     "home": {
       "header": {
-        "title": "StarIPToolBox 代理测试器",
-        "subtitle": "轻松测试您的 SOCKS4、SOCKS5、HTTP(S) 代理。"
+        "title": "StarIPToolBox ",
+        "subtitle": "美观实用的IP工具箱"
       },
       "importSection": {
         "label": "从URL导入代理列表",
@@ -558,7 +558,7 @@
       "tools": {
         "title": "工具列表",
         "items": [
-          "代理测试器",
+          "IP工具箱",
           "我的 IP 信息",
           "IP/域名查询",
           "浏览器环境检测",

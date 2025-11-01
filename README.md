@@ -1,6 +1,6 @@
 <div align="center">
   <img src="logo.svg" width="100%">
-  <h1>StarIPToolbox - IP工具箱</h1>
+  <h1>StarIPToolbox - IP Toolbox</h1>
 </div>
 
 <div align="center">
@@ -10,319 +10,317 @@
 ![React](https://img.shields.io/badge/React-19-61dafb.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6.svg)
 
-**一个界面精美的纯前端IP工具集合**
+**A beautiful collection of pure frontend IP tools**
 
-<<<<<<< HEAD
-[在线体验](https://iptools.xingling.tech) | [功能列表](## 功能特性) | [快速开始](## 快速开始)
-=======
-[在线体验](https://iptools.xingling.tech) | [功能列表](#功能特性) | [快速开始](#快速开始)
->>>>>>> 0729841 (Release V1.0.0)
+[Live Demo](https://iptools.stargazingstudio.site/) | [Features](#features) | [Quick Start](#quick-start)
+
+[![中文](https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87-red?style=for-the-badge)](README_zh.md)
 
 </div>
 
 ---
 
-## 项目简介
+## Introduction
 
-StarIPToolbox 是一个完全运行在浏览器端的IP工具集合，提供18+种专业工具，无需后端服务器，所有数据处理均在本地完成，充分保护用户隐私。项目采用现代化的技术栈，提供流畅的用户体验和精美的毛玻璃UI设计。
-
+StarIPToolbox is a comprehensive IP toolkit that runs entirely in the browser. It provides 18+ professional tools without requiring a backend server. All data processing is done locally, ensuring complete privacy protection. Built with modern technology stack, it offers a smooth user experience with beautiful glassmorphism UI design.
 
 ---
 
-## 功能特性
+## Features
 
-### 网络测试工具
+### Network Testing Tools
 
-#### 1. 代理测试器
+#### 1. Proxy Tester
 
-- 批量测试代理可用性和延迟
-- 支持HTTP/HTTPS/SOCKS4/SOCKS5协议
-- 支持多种代理格式解析
-- 从URL导入代理列表（支持CORS的源）
-- 实时进度显示
-- 可筛选和复制测试结果
+- Batch test proxy availability and latency
+- Support for HTTP/HTTPS/SOCKS4/SOCKS5 protocols
+- Multiple proxy format parsing
+- Import proxy lists from URLs (CORS-enabled sources)
+- Real-time progress display
+- Filter and copy test results
 
-#### 2. 我的IP信息
+#### 2. My IP Information
 
-- 自动检测当前公网IP
-- 显示地理位置信息
-- ISP信息展示
-- ASN查询
+- Automatically detect current public IP
+- Display geolocation information
+- ISP information display
+- ASN lookup
 
-#### 3. IP/域名查询
+#### 3. IP/Domain Lookup
 
-- IP地址详细信息查询
-- 域名解析（支持DoH）
-- 地理位置定位
-- ISP和ASN信息
-- WHOIS数据展示
+- Detailed IP address information query
+- Domain resolution (DoH support)
+- Geolocation mapping
+- ISP and ASN information
+- WHOIS data display
 
-### 隐私与安全工具
+### Privacy & Security Tools
 
-#### 4. 浏览器环境/匿名性测试
+#### 4. Browser Environment/Anonymity Test
 
-完整的浏览器指纹检测系统：
+Complete browser fingerprinting detection system:
 
-- **WebRTC泄露检测** - 检测真实IP是否通过WebRTC暴露
-- **IP一致性检测** - 验证多个来源返回的IP是否一致
-- **时区语言匹配** - 检查浏览器设置与地理位置是否匹配
-- **Canvas指纹检测** - 测试Canvas渲染唯一性
-- **字体指纹检测** - 检测系统安装的字体
-- **硬件属性检测** - 收集屏幕和硬件信息
-- 自动评分系统，以报告卡形式呈现结果
+- **WebRTC Leak Detection** - Check if real IP is exposed through WebRTC
+- **IP Consistency Check** - Verify if IPs from multiple sources match
+- **Timezone Language Matching** - Check if browser settings match geolocation
+- **Canvas Fingerprint Detection** - Test Canvas rendering uniqueness
+- **Font Fingerprint Detection** - Detect installed system fonts
+- **Hardware Attributes Detection** - Collect screen and hardware information
+- Automatic scoring system with report card presentation
 
-#### 5. 邮件头分析器 
+#### 5. Email Header Analyzer
 
-- 分析电子邮件原始头部信息
-- 追踪邮件传输路径
-- 提取发件人IP地址
-- 检查身份验证记录（SPF、DKIM、DMARC）
-- 可视化显示每一跳服务器信息
+- Analyze raw email header information
+- Track email transmission path
+- Extract sender IP addresses
+- Check authentication records (SPF, DKIM, DMARC)
+- Visualize information for each hop server
 
-### 网络工具集
+### Network Utilities
 
-#### 6. 子网计算器
+#### 6. Subnet Calculator
 
-- **IPv4支持** - 完整的IPv4子网计算
-- **IPv6支持** - 支持IPv6子网计算（0-128位CIDR）
-- 计算网络地址、广播地址
-- 首个/最后可用主机
-- 子网掩码和通配符掩码
-- 二进制表示
-- 主机数量统计
+- **IPv4 Support** - Complete IPv4 subnet calculation
+- **IPv6 Support** - IPv6 subnet calculation (0-128 bit CIDR)
+- Calculate network address, broadcast address
+- First/last usable host
+- Subnet mask and wildcard mask
+- Binary representation
+- Host count statistics
 
-#### 7. IP地址转换器
+#### 7. IP Address Converter
 
-- 点分十进制 ↔ 整数
-- 点分十进制 ↔ 十六进制
-- 点分十进制 ↔ 二进制
-- 实时转换，多格式输出
+- Dotted decimal ↔ Integer
+- Dotted decimal ↔ Hexadecimal
+- Dotted decimal ↔ Binary
+- Real-time conversion, multiple format output
 
-#### 8. MAC地址生成器
+#### 8. MAC Address Generator
 
-- 随机生成MAC地址
-- 支持常见厂商前缀
-- 批量生成
-- 一键复制
+- Generate random MAC addresses
+- Support for common vendor prefixes
+- Batch generation
+- One-click copy
 
-### 开发者工具
+### Developer Tools
 
-#### 9. URL解析器 
+#### 9. URL Parser
 
-- 将URL解析为各个组成部分
-- 提取协议、主机名、端口、路径等
-- 单独展示查询参数
-- 支持用户名密码认证URL
-- 一键复制各组件
+- Parse URLs into components
+- Extract protocol, hostname, port, path, etc.
+- Display query parameters separately
+- Support for username/password authentication URLs
+- One-click copy for each component
 
-#### 10. Punycode转换器 
+#### 10. Punycode Converter
 
-- 国际化域名（IDN）↔ Punycode 双向转换
-- 支持多语言域名（中文、日文、德文、俄文等）
-- 内置示例快速体验
-- 实时转换显示
+- Internationalized Domain Name (IDN) ↔ Punycode bidirectional conversion
+- Support for multilingual domain names (Chinese, Japanese, German, Russian, etc.)
+- Built-in examples for quick testing
+- Real-time conversion display
 
-#### 11. 哈希/编码工具
+#### 11. Hash/Encoding Tool
 
-- **哈希算法**: SHA-1, SHA-256, SHA-384, SHA-512
-- **编码**: Base64, URL编码, 十六进制
-- **解码**: Base64, URL解码
-- 实时计算，一键复制
+- **Hash Algorithms**: SHA-1, SHA-256, SHA-384, SHA-512
+- **Encoding**: Base64, URL encoding, Hexadecimal
+- **Decoding**: Base64, URL decoding
+- Real-time calculation, one-click copy
 
-### 高级工具
+### Advanced Tools
 
-#### 12. IPv6工具集
+#### 12. IPv6 Toolkit
 
-- **压缩/展开** - IPv6地址格式转换
-- **IPv4到IPv6映射** - 支持3种映射格式
-- **验证和分析** - 地址类型识别（Global/Link-Local/Unique Local/Multicast/Loopback）
-- **作用域检测** - 识别地址作用域
-- **二进制表示** - 显示二进制格式
-- **规范格式化** - 转换为规范格式
+- **Compress/Expand** - IPv6 address format conversion
+- **IPv4 to IPv6 Mapping** - Support 3 mapping formats
+- **Validation and Analysis** - Address type identification (Global/Link-Local/Unique Local/Multicast/Loopback)
+- **Scope Detection** - Identify address scope
+- **Binary Representation** - Display in binary format
+- **Canonical Formatting** - Convert to canonical format
 
-#### 13. 批量IP生成器
+#### 13. Bulk IP Generator
 
-三种生成模式：
+Three generation modes:
 
-- **CIDR模式** - 生成完整网段（限制10,000个）
-- **范围模式** - 指定起始和结束IP（限制10,000个）
-- **随机模式** - 生成随机IP地址（限制1,000个）
+- **CIDR Mode** - Generate complete network segments (limit 10,000)
+- **Range Mode** - Specify start and end IP (limit 10,000)
+- **Random Mode** - Generate random IP addresses (limit 1,000)
 
-导出选项：
+Export options:
 
-- TXT格式
-- CSV格式
-- 一键复制
+- TXT format
+- CSV format
+- One-click copy
 
-#### 14. 服务器屏蔽规则生成器
+#### 14. Server Block Rules Generator
 
-支持5种服务器/防火墙类型：
+Support for 5 server/firewall types:
 
-- **Apache** (.htaccess格式)
-- **Nginx** (nginx.conf格式)
-- **iptables** (Linux防火墙)
+- **Apache** (.htaccess format)
+- **Nginx** (nginx.conf format)
+- **iptables** (Linux firewall)
 - **firewalld** (RHEL/CentOS)
-- **Windows防火墙** (netsh命令)
+- **Windows Firewall** (netsh commands)
 
-自动生成正确格式的规则，带详细使用说明
+Automatically generate correctly formatted rules with detailed usage instructions
 
-#### 15. DNS记录可视化
+#### 15. DNS Record Visualizer
 
-- 查询多种DNS记录类型（A, AAAA, CNAME, MX, TXT, NS）
-- 使用Cloudflare DoH API
-- 可视化展示查询结果
-- 显示TTL信息
+- Query multiple DNS record types (A, AAAA, CNAME, MX, TXT, NS)
+- Uses Cloudflare DoH API
+- Visualize query results
+- Display TTL information
 
-#### 16. WebSocket测试工具
+#### 16. WebSocket Test Tool
 
-- 连接任意WebSocket服务器
-- 实时发送和接收消息
-- 消息历史记录
-- 连接状态显示
-- 支持ws://和wss://协议
+- Connect to any WebSocket server
+- Send and receive messages in real-time
+- Message history
+- Connection status display
+- Support for ws:// and wss:// protocols
 
-#### 17. HTTP头部检查器
+#### 17. HTTP Header Checker
 
-- 检查HTTP响应状态码
-- 显示完整响应头
-- 重定向链跟踪
-- CORS兼容性检测
+- Check HTTP response status codes
+- Display complete response headers
+- Track redirect chains
+- CORS compatibility detection
 
 ---
 
-## 快速开始
+## Quick Start
 
-### 在线使用
+### Online Usage
 
-直接访问：[https://stargazing-studio.github.io/StarProxyTestTool/](https://stargazing-studio.github.io/StarProxyTestTool/)
+Visit directly: [https://iptools.stargazingstudio.site/](https://iptools.stargazingstudio.site/)
 
-### 本地开发
+### Local Development
 
-#### 环境要求
+#### Requirements
 
 - Node.js >= 18
 - npm >= 9
 
-#### 安装步骤
+#### Installation Steps
 
 ```bash
-# 克隆项目
-git clone https://github.com/Stargazing-Studio/StarProxyTestTool.git
+# Clone the repository
+git clone https://github.com/Stargazing-Studio/StarIPToolBox.git
 cd StarProxyTestTool
 
-# 安装依赖
+# Install dependencies
 npm install
 
-# 配置环境变量（可选）
+# Configure environment variables (optional)
 cp .env.example .env
-# 编辑 .env 文件，配置背景图片API
+# Edit .env file to configure background image API
 
-# 启动开发服务器
+# Start development server
 npm run dev
 
-# 构建生产版本
+# Build for production
 npm run build
 
-# 预览生产构建
+# Preview production build
 npm run preview
 ```
 
-#### 环境变量配置
+#### Environment Variable Configuration
 
-项目支持自定义背景图片。创建 `.env` 文件并配置：
+The project supports custom background images. Create a `.env` file and configure:
 
 ```bash
-# 背景图片API地址（可选）
-# 留空则使用默认渐变背景
+# Background image API URL (optional)
+# Leave empty to use default gradient background
 VITE_WALLPAPER_API_URL=
 
-# 示例：使用必应壁纸
+# Example: Use Bing wallpaper
 # VITE_WALLPAPER_API_URL=https://your-bing-wallpaper-api.com/
 ```
 
-**推荐的背景图片服务**：
-- [Bing Wallpaper API](https://github.com/SunXin121/bing_wallpaper) - 提供必应每日壁纸
+**Recommended background image services**:
+- [Bing Wallpaper API](https://github.com/SunXin121/bing_wallpaper) - Provides Bing daily wallpapers
 
-如果不配置背景图片API，应用将使用渐变色背景。
+If no background image API is configured, the application will use a gradient background.
 
-#### 部署到GitHub Pages
+#### Deploy to GitHub Pages
 
 ```bash
-# 构建并部署
+# Build and deploy
 npm run deploy
 ```
 
+---
 
-## 贡献指南
+## Contributing
 
-欢迎贡献代码！请遵循以下步骤：
+Contributions are welcome! Please follow these steps:
 
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### 代码规范
+### Code Standards
 
-- 使用TypeScript编写
-- 遵循ESLint规则
-- 保持代码简洁清晰
-- 添加必要的注释
+- Write in TypeScript
+- Follow ESLint rules
+- Keep code clean and concise
+- Add necessary comments
 
-### 添加新功能
+### Adding New Features
 
-如果您想添加新功能，请确保：
+If you want to add new features, please ensure:
 
-1. 功能是纯前端实现
-2. 添加完整的i18n支持（zh.json 和 en.json）
-3. 在 Layout.tsx 中添加导航菜单项
-4. 在 App.tsx 中配置路由
-5. 更新 README.md 的功能列表
+1. The feature is purely frontend implementation
+2. Add complete i18n support (zh.json and en.json)
+3. Add navigation menu items in Layout.tsx
+4. Configure routes in App.tsx
+5. Update the feature list in README.md
 
 ---
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ---
 
-## 作者
+## Authors
 
 **Stargazing Studio - XingLingQAQ - AI**
 
 - GitHub: [@Stargazing-Studio](https://github.com/Stargazing-Studio)
-- 项目链接: [StarProxyTestTool](https://github.com/Stargazing-Studio/StarProxyTestTool)
+- Project Link: [StarProxyTestTool](https://github.com/Stargazing-Studio/StarIPToolBox)
 
 ---
 
-## 致谢
+## Acknowledgments
 
-- AI工具
-- [Bing Wallpaper API](https://github.com/SunXin121/bing_wallpaper) - 背景图片服务
-- 感谢所有贡献者
-- 感谢开源社区
-- 特别感谢使用本工具的每一位用户
+- AI Tools
+- [Bing Wallpaper API](https://github.com/SunXin121/bing_wallpaper) - Background image service
+- Thanks to all contributors
+- Thanks to the open source community
+- Special thanks to every user of this tool
 
-如果这个项目对你有帮助，请给个 ⭐ Star 支持一下！
+If this project helps you, please give it a ⭐ Star!
 
 ---
 
-## 隐私声明
+## Privacy Statement
 
-本项目完全在浏览器端运行，不会向任何服务器发送您的数据：
+This project runs entirely in the browser and does not send your data to any server:
 
-- ✅ 所有计算和处理都在本地完成
-- ✅ 不收集任何用户信息
-- ✅ 不使用任何追踪代码
-- ✅ 不依赖第三方数据收集服务
-- ✅ 开源透明，代码可审计
+- ✅ All calculations and processing are done locally
+- ✅ No user information is collected
+- ✅ No tracking code is used
+- ✅ No third-party data collection services
+- ✅ Open source and transparent, code is auditable
 
-唯一的外部请求：
-- 背景图片加载（如果配置了VITE_WALLPAPER_API_URL）
-- IP查询功能使用的公共API（ipapi.co, ipify.org等）
-- DNS查询使用Cloudflare DoH
+The only external requests:
+- Background image loading (if VITE_WALLPAPER_API_URL is configured)
+- Public APIs used for IP lookup (ipapi.co, ipify.org, etc.)
+- DNS queries use Cloudflare DoH
 
 ---
 
@@ -330,6 +328,6 @@ npm run deploy
 
 Made with ❤️ by Stargazing Studio
 
-[返回顶部](#stariptoolbox---ip工具箱)
+[Back to Top](#stariptoolbox---ip-toolbox)
 
 </div>
